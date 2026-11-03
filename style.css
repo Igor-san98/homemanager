@@ -218,6 +218,35 @@ hr.sep {
   border-top: 1px solid var(--line);
 }
 
+/* Languages: lang.js shows one at a time. Without it both show, English
+   first, and the short labels stay in English. */
+
+html.show-en section[lang="it"],
+html.show-it section[lang="en"],
+html.show-en hr.sep,
+html.show-it hr.sep {
+  display: none;
+}
+
+.t-it {
+  display: none;
+}
+
+html.show-it .t-it {
+  display: inline;
+}
+
+html.show-it .t-en {
+  display: none;
+}
+
+html.show-en .lang a[href="#en"],
+html.show-it .lang a[href="#it"] {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
 /* Footer */
 
 footer {
